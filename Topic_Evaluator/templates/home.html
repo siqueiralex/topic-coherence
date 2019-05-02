@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Avaliador </title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'css/loading_animation.css' %}">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+    <script src= "{% static 'js/topic.js' %}"></script>
+
+  </head>
+  <body>
+    
+    <div class="jumbotron text-center">
+        <h1>Avaliador de Tópicos</h1>
+    </div>
+
+    <div class="container align-items-center">  
+        <form id='topic-form'>
+            <div class="input-group">
+            <span class="input-group-addon">Tópico</span>
+            <input id="topic" type="text" class="form-control" name="topico" placeholder="Adicione as palavras do tópico separadas por espaço. Depois aperte o play.">
+            <div class="input-group-btn">
+                <button id = "btnSubmit" class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-play"></i>
+                </button>
+            </div>
+            </div>
+        
+            <div class="checkbox">
+                <label><input type="checkbox" value="">Stemmed Words</label>
+            </div>
+    
+
+      </form>
+        
+        <div id='spinner' ><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        
+        <div id='result'></div>
+    
+    </div>
+    
+   
+  </body>
+  <script>
+    const form_handler = new FormHandler;
+    $("#topic-form").submit(function(e){
+        e.preventDefault();
+        form_handler.submit();
+    });
+    $("#topic").attr('oninput', 'form_handler.mudou_topico();');
+  </script>
+</html>
