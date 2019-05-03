@@ -4,14 +4,20 @@ class FormHandler{
     constructor(){
         this.topic = null;
         this.wordlist = null;
-        this.mudou_topico();
+        this.topic_changed();
+        this.steemed = false;
     }
 
     submit(){
         $('#result').html('')
+        if($("#steemed").is(":checked")){
+            this.steemed = true;
+        }else{
+            this.steemed = false;
+        }
         if(this.wordlist.length > 1){
             $('#spinner').addClass("lds-spinner");
-            this.avalia_topico( data => {
+            this.evaluate_topic( data => {
                 $('#spinner').removeClass("lds-spinner")
                 console.log( 'data:',data);
                 let str = "";
@@ -24,7 +30,7 @@ class FormHandler{
         }
     }
 
-    mudou_topico(){
+    topic_changed(){
         this.topic = $('#topic').val();
         this.wordlist = this.topic.split(" ");
 
@@ -35,12 +41,14 @@ class FormHandler{
         }
     }
 
-    avalia_topico(callback){
+    evaluate_topic(callback){
+
         $.ajax({
             type: 'POST',
             url: "/api/topic/",
             data: {
-                 topic: this.topic
+                 topic: this.topic,
+                 steemed: this.steemed
             },
             success: function(data) {
                callback(data);

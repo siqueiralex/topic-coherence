@@ -63,7 +63,6 @@ def topic_coherence(topic, metric):
 def model_coherence(topics, metric, topns):
 
     #read the topic file and compute the observed coherence
-
     top_coherence = defaultdict(list) # {topicid: [tc]}
     topic_tw = {} #{topicid: topN_topicwords}
     for topic_id, line in enumerate(topics):

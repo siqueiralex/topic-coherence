@@ -7,12 +7,24 @@ import json
 @csrf_exempt
 def topic(request):
     if(request.method == 'POST'):
+
         if('topic' not in request.POST.keys()):
             return JsonResponse({"message": "Bad Request. Expected 'topic' field."}, status=400)
+
 
         topic = request.POST['topic']
         if (type(topic) != str or len(topic.split()) < 2):
             return JsonResponse({"message": "Bad Request. Field 'topic' must must be a string with two or more words separated by spaces."}, status=400)
+
+        if('steemed' in request.POST.keys()):
+            steemed = request.POST['steemed']
+            print(steemed)
+            if(steemed == 'false'):
+                from nltk.stem.snowball import SnowballStemmer
+                stemmer = SnowballStemmer("english")
+                stemed_topic = [stemmer.stem(x) for x in topic.split()]
+                #topic = " ".join(steemed_topic)
+                print(steemed_topic)
 
         data = calculate_word_count(topic)
         npmi = topic_coherence(topic,"npmi")

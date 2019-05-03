@@ -32,7 +32,7 @@
             </div>
         
             <div class="checkbox">
-                <label><input type="checkbox" value="">Stemmed Words</label>
+                <label><input id="steemed" type="checkbox" value="">Stemmed Words</label>
             </div>
     
 
@@ -52,6 +52,6 @@
         e.preventDefault();
         form_handler.submit();
     });
-    $("#topic").attr('oninput', 'form_handler.mudou_topico();');
+    $("#topic").attr('oninput', 'form_handler.topic_changed();');
   </script>
 </html>
