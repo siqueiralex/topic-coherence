@@ -18,7 +18,7 @@ $ python manage.py migrate
 ``
 
 
-## End-points:
+## API end-points:
 
 ### /api/topic/ (POST): 
 
@@ -29,3 +29,14 @@ Request body:
 Response:
 - pmi: mean of the Pointwise Mutual Information of each pair of topic words
 - npmi: mean of the Normalized Pointwise Mutual Information of each pair of topic words
+
+### /api/model/ (POST): 
+
+Expect as request body a json containing one single field named "topics" consisting of a list of strings. Example:
+{
+    topics: ["first topic", "second topic"]
+}
+
+Response:
+- pmi: PMI results for each topic followed by mean and median of entire model. 
+- npmi: NPMI results for each topic followed by mean and median of entire model.
