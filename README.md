@@ -33,9 +33,12 @@ Response:
 ### /api/model/ (POST): 
 
 Expect as request body a json containing one single field named "topics" consisting of a list of strings. Example:
+
+```
 {
     topics: ["first topic", "second topic"]
 }
+```
 
 Response:
 - pmi: PMI results for each topic followed by mean and median of entire model. 
