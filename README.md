@@ -16,3 +16,16 @@ $ python manage.py makemigrations
 ``
 $ python manage.py migrate
 ``
+
+
+## End-points:
+
+### /api/topic/ (POST): 
+
+Request body:
+- topic (string, required): space separated topic words
+- stemmed (boolean, optional): True if topic words are already stemmed. Default: True
+
+Response:
+- pmi: mean of the Pointwise Mutual Information of each pair of topic words
+- npmi: mean of the Normalized Pointwise Mutual Information of each pair of topic words
