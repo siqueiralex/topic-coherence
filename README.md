@@ -9,7 +9,7 @@
 - Migrate to create your DB and tables:
 
 ``
-$ python manage.py make migrations
+$ python manage.py makemigrations
 ``
 
 
