@@ -1,2 +1,4 @@
 .vscode/
 .DS_Store
+Topic_Evaluator/Topic_Evaluator/settings.py
+Topic_Evaluator/api/ref_corpus/*
