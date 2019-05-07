@@ -16,15 +16,14 @@ def topic(request):
         if (type(topic) != str or len(topic.split()) < 2):
             return JsonResponse({"message": "Bad Request. Field 'topic' must must be a string with two or more words separated by spaces."}, status=400)
 
-        if('steemed' in request.POST.keys()):
-            steemed = request.POST['steemed']
-            print(steemed)
-            if(steemed == 'false'):
+        if('stemmed' in request.POST.keys()):
+            stemmed = request.POST['stemmed']
+            if(stemmed == 'false'):
                 from nltk.stem.snowball import SnowballStemmer
-                stemmer = SnowballStemmer("english")
-                stemed_topic = [stemmer.stem(x) for x in topic.split()]
-                #topic = " ".join(steemed_topic)
-                print(steemed_topic)
+                stemmer = SnowballStemmer("portuguese")
+                stemmed_topic = [stemmer.stem(x) for x in topic.split()]
+                topic = " ".join(stemmed_topic)
+                
 
         data = calculate_word_count(topic)
         npmi = topic_coherence(topic,"npmi")

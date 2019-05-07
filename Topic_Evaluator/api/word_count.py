@@ -311,6 +311,8 @@ def calculate_word_count(topic, window_size = 20, debug = False):
         if not WordCount.objects.filter(word=word):
             WordCount(word=word,count=word_count[word]).save()
 
+    print(word_count)
+
     # retornar vazio se só tiver TOTALWINDOWS
     return word_count
 

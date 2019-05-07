@@ -5,15 +5,15 @@ class FormHandler{
         this.topic = null;
         this.wordlist = null;
         this.topic_changed();
-        this.steemed = false;
+        this.stemmed = false;
     }
 
     submit(){
         $('#result').html('')
-        if($("#steemed").is(":checked")){
-            this.steemed = true;
+        if($("#stemmed").is(":checked")){
+            this.stemmed = true;
         }else{
-            this.steemed = false;
+            this.stemmed = false;
         }
         if(this.wordlist.length > 1){
             $('#spinner').addClass("lds-spinner");
@@ -48,7 +48,7 @@ class FormHandler{
             url: "/api/topic/",
             data: {
                  topic: this.topic,
-                 steemed: this.steemed
+                 stemmed: this.stemmed
             },
             success: function(data) {
                callback(data);

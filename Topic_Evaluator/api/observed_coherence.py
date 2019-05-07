@@ -28,6 +28,18 @@ def topic_coherence(topic, metric):
         combined = w2 + "|" + w1 if w1 > w2 else w1 + "|" + w2
         combined_count =  fetch(combined)[0].count if fetch(combined) else 0
 
+        if not fetch(w1):
+            print("Found no occurrences of", w1)
+            WordCount(word=w1,count=0).save()
+
+        if not fetch(w2):
+            print("Found no occurrences of", w2)
+            WordCount(word=w2,count=0).save()
+
+        if not fetch(combined):
+            print("Found no occurrences of", combined)
+            WordCount(word=combined, count=0).save()
+
 
         if (metric == "pmi") or (metric == "npmi"):
             if w1_count == 0 or w2_count == 0 or combined_count == 0:
