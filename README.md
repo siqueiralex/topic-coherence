@@ -43,3 +43,21 @@ Expect as request body a json containing one single field named "topics" consist
 Response:
 - pmi: PMI results for each topic followed by mean and median of entire model. 
 - npmi: NPMI results for each topic followed by mean and median of entire model.
+Example:
+
+```
+{
+    "npmi": {
+        "first topic": 0.03744432236391448,
+        "secon topic": 0.09581050534215818,
+        "mean": 0.12076177801136062,
+        "median": 0.10742810941196021
+    },
+    "pmi": {
+        "first topic": 0.16460474798134597,
+        "second topic": 0.37554670802735235,
+        "mean": 0.466311314109751,
+        "median": 0.39846612997353675
+    }
+}
+```
