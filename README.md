@@ -8,13 +8,13 @@
 - Create a settings.py inside Topic_Evaluator/Topic_Evaluator/ using the example (change only DB information)
 - Migrate to create your DB and tables:
 
-``
-$ python manage.py makemigrations
-``
+```console
+user@foo:~$ python manage.py makemigrations
+```
 
-``
-$ python manage.py migrate
-``
+```console
+user@foo:~$ python manage.py migrate
+```
 
 
 ## API end-points:
