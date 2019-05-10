@@ -42,6 +42,7 @@ Expect as request body a json containing one single field named "topics" consist
 Response:
 - pmi: PMI results for each topic followed by mean and median of entire model. 
 - npmi: NPMI results for each topic followed by mean and median of entire model.
+  
 Example:
 
 ```js
