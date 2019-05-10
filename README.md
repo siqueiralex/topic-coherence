@@ -33,7 +33,7 @@ Response:
 
 Expect as request body a json containing one single field named "topics" consisting of a list of strings. Example:
 
-```
+```js
 {
     topics: ["first topic", "second topic"]
 }
@@ -44,7 +44,7 @@ Response:
 - npmi: NPMI results for each topic followed by mean and median of entire model.
 Example:
 
-```
+```js
 {
     "npmi": {
         "first topic": 0.03744432236391448,
