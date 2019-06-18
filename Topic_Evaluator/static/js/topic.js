@@ -5,16 +5,10 @@ class FormHandler{
         this.topic = null;
         this.wordlist = null;
         this.topic_changed();
-        this.stemmed = false;
     }
 
     submit(){
         $('#result').html('')
-        if($("#stemmed").is(":checked")){
-            this.stemmed = true;
-        }else{
-            this.stemmed = false;
-        }
         if(this.wordlist.length > 1){
             $('#spinner').addClass("lds-spinner");
             this.evaluate_topic( data => {
@@ -47,8 +41,7 @@ class FormHandler{
             type: 'POST',
             url: "/api/topic/",
             data: {
-                 topic: this.topic,
-                 stemmed: this.stemmed
+                 topic: this.topic
             },
             success: function(data) {
                callback(data);

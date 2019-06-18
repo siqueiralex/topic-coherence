@@ -11,21 +11,14 @@ def topic(request):
         if('topic' not in request.POST.keys()):
             return JsonResponse({"message": "Bad Request. Expected 'topic' field."}, status=400)
 
-
         topic = request.POST['topic']
         if (type(topic) != str or len(topic.split()) < 2):
             return JsonResponse({"message": "Bad Request. Field 'topic' must must be a string with two or more words separated by spaces."}, status=400)
+        
+        # implementar erro caso algo inesperado aconteça (usar o retorno da função)        
+        calculate_word_count(topic)
 
-        if('stemmed' in request.POST.keys()):
-            stemmed = request.POST['stemmed']
-            if(stemmed == 'false'):
-                from nltk.stem.snowball import SnowballStemmer
-                stemmer = SnowballStemmer("portuguese")
-                stemmed_topic = [stemmer.stem(x) for x in topic.split()]
-                topic = " ".join(stemmed_topic)
-                
 
-        data = calculate_word_count(topic)
         npmi = topic_coherence(topic,"npmi")
         pmi = topic_coherence(topic,"pmi")
 

@@ -26,7 +26,7 @@ def global_function(func):
 
 
 
-def calculate_word_count(topic, window_size = 20, debug = False):
+def calculate_word_count(topic, window_size = 10, debug = False):
     '''
         topic -> space separated words forming the topic
         window_size -> size of the sliding window, use 0 to take each document as a window    
@@ -277,7 +277,7 @@ def calculate_word_count(topic, window_size = 20, debug = False):
 
 
     
-    # check for pre-existing word-relations in the DB and removing them
+    # check for pre-existing word-relations in DB and removing them
     for word in topic_word_rel:
         to_remove = []
         for related in topic_word_rel[word]:
@@ -311,7 +311,7 @@ def calculate_word_count(topic, window_size = 20, debug = False):
         if not WordCount.objects.filter(word=word):
             WordCount(word=word,count=word_count[word]).save()
 
-    print(word_count)
+    print("word_count:",word_count)
 
     # retornar vazio se só tiver TOTALWINDOWS
     return word_count
