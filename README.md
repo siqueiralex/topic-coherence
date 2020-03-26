@@ -63,8 +63,9 @@ user@foo:~$ (venv) python manage.py runserver
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
-Go to your Navigator and check "http://127.0.0.1:8000/" adress to see if your django project is up and running.
+Use the given address to check if your Project is up and running in your Web Browser.
 
+## Usage of the Browser Interface
 
 
 
