@@ -40,6 +40,7 @@ def topic_coherence(topic, metric):
             print("Found no occurrences of", combined)
             WordCount(word=combined, count=0).save()
 
+        #print(w1+":", w1_count,w2+":", w2_count,combined+":",combined_count)
 
         if (metric == "pmi") or (metric == "npmi"):
             if w1_count == 0 or w2_count == 0 or combined_count == 0:
@@ -67,9 +68,9 @@ def topic_coherence(topic, metric):
             w2 = " ".join(topic_word.split(colloc_sep))
             if target_word != topic_word:
                 topic_assoc.append(calc_pair(w1, w2, metric))
-
-    return float(sum(topic_assoc))/len(topic_assoc)
-
+    valid = topic            
+#    return float(sum(topic_assoc))/len(topic_assoc)
+    return np.median(topic_assoc)
 
 
 def model_coherence(topics, metric, topns):
