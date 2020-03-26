@@ -1,8 +1,20 @@
 # Topic Coherence Evaluation API
 
-## Installation:
+Rest API for semantic coherence evaluation of sets of words (topics). Calculated based on the proximity of word pairs inside a (big and good enough) reference corpus, usually Wikipedia or/and News Articles.
 
-#### Setup your virtual enviroment (recommended python version=3.7)
+
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You'll nedd `Python 3.7`, `Django`, `Mysql database` and a good reference corpus.
+
+### Installation:
+
+--> Setup your virtual enviroment (recommended python version=3.7)
 
 ```sh
 user@foo:~$ virtualenv venv -p python3.7 
