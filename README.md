@@ -1,8 +1,12 @@
 # Topic Coherence Evaluation API
 
-Rest API for semantic coherence evaluation of sets of words (topics). Calculated based on the proximity of word pairs inside a (big and good enough) reference corpus, usually Wikipedia or/and News Articles.
+Rest API for semantic coherence evaluation of sets of words (topics). Calculated based on the proximity of word pairs (pmi, npmi) inside a (big and good enough) reference corpus, usually Wikipedia or/and News Articles. 
 
+This project is based on the work developed by Lau, Jey Han [[1]](#1), [Github](https://github.com/jhlau/topic_interpretability)
 
+New features developed here:
+- Evaluation available through simple REST API
+- Past calculations are stored in database, avoiding recalculations.
 
 ## Getting Started
 
@@ -65,10 +69,11 @@ Quit the server with CONTROL-C.
 ```
 Use the given address to check if your Project is up and running in your Web Browser.
 
-## Usage of the Browser Interface
+## Web Browser Interface
 <p align="center">
-<img src="https://github.com/siqueiralex/topic-coherence/blob/master/User-Interface-Example.png" alt="User Interface" width="700px">
+<img style="border: 1px solid"src="https://github.com/siqueiralex/topic-coherence/blob/master/User-Interface-Example.png" alt="User Interface" width="700px">
 </p>
+This Web interface is intended only for **simple** demonstration of topic evaluation process. Note that you should use at least two words separated by spaces. Works better if the topic words are well represented in the Reference Corpus.
 
 
 ## API end-points:
@@ -115,3 +120,12 @@ Example:
     }
 }
 ```
+
+
+"...the **go to** statement should be abolished..." 
+
+## References
+<a id="1">[1]</a> 
+Lau, Jey Han e David Newman (2014)
+Machine Reading Tea Leaves: Automatically Evaluating Topic Coherence and Topic Model Quality. 
+abril 2014. ix, 3, 10, 11, 21, 25,26, 30, 32,
