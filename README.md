@@ -36,10 +36,10 @@ user@foo:~$ python manage.py migrate
 ```
 Topic_Evaluator/
   api/
-    ref_corpus/ <-- create this folder
+    ref_corpus/ <-- create this folder and put your corpus inside it
 ```
 
-- Inside this folder place you should place the pre-processed reference corpus as text files with one document per line (no sub-folders)
+- Obs: The reference corpus must be formed by multiple text files with one document per line (no sub-folders)
 
 
 ## API end-points:
