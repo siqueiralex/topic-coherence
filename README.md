@@ -56,7 +56,19 @@ Topic_Evaluator/
     ref_corpus/ <-- create this folder and put your corpus inside it
 
 Important: The reference corpus must be formed by multiple text files 
-with one document per line (no sub-folders)
+with one document per line (no sub-folders), for example:
+
+Topic_Evaluator/
+  api/
+    ref_corpus/
+      Wikipedia/
+        AA.txt
+        AB.txt
+        (...)
+      NewYorkTimes/
+        Jan.txt
+        Fev.txt
+        (...)
 
 ```
 
