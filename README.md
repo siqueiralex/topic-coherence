@@ -67,7 +67,7 @@ user@foo:~$ (venv) python manage.py runserver
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
-Use the given address to check if your Project is up and running in your Web Browser.
+Now check if your Project is up and running in your Browser.
 
 ## Web Browser Interface
 <p align="center">
