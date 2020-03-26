@@ -2,7 +2,7 @@
 
 ## Installation:
 
-### Setup your virtual enviroment (recommended python version=3.7)
+#### Setup your virtual enviroment (recommended python version=3.7)
 
 ```sh
 user@foo:~$ virtualenv venv -p python3.7 
@@ -11,7 +11,7 @@ user@foo:~$ virtualenv venv -p python3.7
 user@foo:~$ source venv/bin/activate 
 ```
 
-### Install depedencies
+#### Install depedencies
 
 ```sh
 user@foo:~$ (venv) pip install requirements.txt 
