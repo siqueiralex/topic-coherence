@@ -1,6 +1,6 @@
 # Topic Coherence Evaluation API
 
-Rest API for semantic coherence evaluation of sets of words (topics). Calculated based on the co-occurrence of word pairs (pmi, npmi) inside a (big and good enough) reference corpus, usually Wikipedia or/and News Articles. 
+Rest API for semantic coherence evaluation of sets of words (topics). Calculated based on the co-occurrence of word pairs (PMI/NPMI) inside a (big and good enough) reference corpus, usually Wikipedia or/and News Articles. 
 
 This project is based on the work developed by Lau, Jey Han [[1]](#1), [Github](https://github.com/jhlau/topic_interpretability)
 
@@ -94,11 +94,10 @@ This Web interface is intended only for simple demonstration of topic evaluation
 
 Request body:
 - topic (string, required): space separated topic words
-- stemmed (boolean, optional): True if topic words are already stemmed. Default: True
 
 Response:
-- pmi: mean of the Pointwise Mutual Information of each pair of topic words
-- npmi: mean of the Normalized Pointwise Mutual Information of each pair of topic words
+- pmi: mean of the PMI [[2]](#2) of each pair of topic words
+- npmi: mean of the NPMI [[3]](#3) of each pair of topic words
 
 ### /api/model/ (POST): 
 
@@ -111,8 +110,8 @@ Expect as request body a json containing one single field named "topics" consist
 ```
 
 Response:
-- pmi: PMI results for each topic followed by mean and median of entire model. 
-- npmi: NPMI results for each topic followed by mean and median of entire model.
+- pmi: PMI [[2]](#2) results for each topic followed by mean and median of entire model. 
+- npmi: NPMI [[3]](#3) results for each topic followed by mean and median of entire model.
   
 Example:
 
@@ -137,4 +136,13 @@ Example:
 <a id="1">[1]</a> 
 Lau, Jey Han e David Newman (2014)
 Machine Reading Tea Leaves: Automatically Evaluating Topic Coherence and Topic Model Quality. 
-abril 2014. ix, 3, 10, 11, 21, 25,26, 30, 32,
+
+<a id="2">[2]</a> 
+Newman, David, Sarvnaz Karimi e Lawrence Cavedon (2009)
+External Evaluation of Topic Models
+
+<a id="3">[3]</a> 
+Bouma, Gerlof (2009)
+Normalized (Pointwise) Mutual Information in Collocation Extrac-tion
+Proceedings of the Biennial GSCL Conference
+
