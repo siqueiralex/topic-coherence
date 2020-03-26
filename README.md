@@ -23,13 +23,13 @@ user@foo:~$ virtualenv venv -p python3.7
 user@foo:~$ source venv/bin/activate 
 ```
 
-#### Install depedencies
+* Install depedencies
 
 ```sh
 user@foo:~$ (venv) pip install requirements.txt 
 ```
 
-#### Create `settings.py` file using the given example (adding DB information)
+* *Create `settings.py` file using the given example (adding DB information)
 
 ```
 Topic_Evaluator/
@@ -38,21 +38,23 @@ Topic_Evaluator/
     settings.py <-- to create this one
 ```
 
-#### Migrate to create your Database Tables:
-* (inside Topic_Evaluator folder)
+*  Migrate to create your Database Tables (inside the first Topic_Evaluator folder)
 ```sh
 user@foo:~$ python manage.py migrate
 ```
 
-#### Create your Reference Corpus folder
+* Create your Reference Corpus folder
 
 ```
 Topic_Evaluator/
   api/
     ref_corpus/ <-- create this folder and put your corpus inside it
+
+     'Obs: The reference corpus must be formed by multiple text files with one document per line (no sub-folders)'
+     
 ```
 
-- Obs: The reference corpus must be formed by multiple text files with one document per line (no sub-folders)
+
 
 
 ## API end-points:
