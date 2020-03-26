@@ -50,8 +50,9 @@ Topic_Evaluator/
   api/
     ref_corpus/ <-- create this folder and put your corpus inside it
 
-     'Obs: The reference corpus must be formed by multiple text files with one document per line (no sub-folders)'
-     
+Important: The reference corpus must be formed by multiple text files 
+with one document per line (no sub-folders)
+
 ```
 
 
