@@ -10,11 +10,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You'll nedd `Python 3.7`, `Django`, `Mysql database` and a good reference corpus.
+You'll nedd `Python 3.7`, `Django`, `MysqlDB` and a good Reference Corpus.
 
 ### Installation:
 
---> Setup your virtual enviroment (recommended python version=3.7)
+-> Setup your virtual enviroment (recommended python version=3.7)
 
 ```sh
 user@foo:~$ virtualenv venv -p python3.7 
