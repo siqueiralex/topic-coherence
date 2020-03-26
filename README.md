@@ -56,7 +56,7 @@ with one document per line (no sub-folders)
 
 ```
 
-* Run your project and test in the html viewer:
+* Run your project and test it:
 ```sh
 user@foo:~$ (venv) python manage.py runserver
 (...)
@@ -66,7 +66,9 @@ Quit the server with CONTROL-C.
 Use the given address to check if your Project is up and running in your Web Browser.
 
 ## Usage of the Browser Interface
-
+<p align="center">
+<img src="https://github.com/siqueiralex/topic-coherence/blob/master/User-Interface-Example.png" alt="User Interface" width="700px">
+</p>
 
 
 ## API end-points:
