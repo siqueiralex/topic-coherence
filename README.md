@@ -2,17 +2,29 @@
 
 ## Installation:
 
-- Setup your Django enviroment using venv and requirements.txt
+- Setup your virtual enviroment (recommended python version=3.7)
+
+```sh
+user@foo:~$ virtualenv venv -p python3.7 
+```
+```sh
+user@foo:~$ source venv/bin/activate 
+```
+
+- Install depedencies
+
+```sh
+user@foo:~$ (venv) pip install requirements.txt 
+```
+
 - Create a folder named "ref_corpus" inside Topic_Evaluator/api/ 
-- Inside this folder place your pre-processed reference corpus as text files with one article/document per line (no sub-folders)
+- Inside this folder place you should place the pre-processed reference corpus as text files with one document per line (no sub-folders)
 - Create a settings.py inside Topic_Evaluator/Topic_Evaluator/ using the example (change only DB information)
 - Migrate to create your DB and tables:
 
-```console
-user@foo:~$ python manage.py makemigrations
-```
 
-```console
+
+```sh
 user@foo:~$ python manage.py migrate
 ```
 
