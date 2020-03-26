@@ -29,7 +29,7 @@ user@foo:~$ source venv/bin/activate
 user@foo:~$ (venv) pip install requirements.txt 
 ```
 
-* *Create `settings.py` file using the given example (adding DB information)
+* Create the `settings.py` file using the given example (adding DB information)
 
 ```
 Topic_Evaluator/
