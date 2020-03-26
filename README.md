@@ -17,13 +17,23 @@ user@foo:~$ source venv/bin/activate
 user@foo:~$ (venv) pip install requirements.txt 
 ```
 
+#### Create a file named `settings.py` using the example (changing only DB information)
+
+```
+Topic_Evaluator/
+  Topic_Evaluator/
+    settings-example.py <-- use this one
+    settings.py <-- to create this one
+```
+
+
+
 - Create a folder named "ref_corpus" inside Topic_Evaluator/api/ 
 - Inside this folder place you should place the pre-processed reference corpus as text files with one document per line (no sub-folders)
-- Create a settings.py inside Topic_Evaluator/Topic_Evaluator/ using the example (change only DB information)
+
+
+
 - Migrate to create your DB and tables:
-
-
-
 ```sh
 user@foo:~$ python manage.py migrate
 ```
