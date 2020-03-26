@@ -38,8 +38,9 @@ Topic_Evaluator/
     settings.py <-- to create this one
 ```
 
-*  Migrate to create your Database Tables (inside the first Topic_Evaluator folder)
+*  Migrate to create your Database Tables
 ```sh
+user@foo:~$ cd Topic_Evaluator/
 user@foo:~$ python manage.py migrate
 ```
 
