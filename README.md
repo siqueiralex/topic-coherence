@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You'll nedd `Python 3.7`, `Django`, `MysqlDB` and a good Reference Corpus.
+You'll nedd `Python 3.7`, `Django`, `MySQL DB` and a good Reference Corpus.
 
 ### Installation:
 
