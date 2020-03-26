@@ -41,7 +41,7 @@ Topic_Evaluator/
 *  Migrate to create your Database Tables
 ```sh
 user@foo:~$ cd Topic_Evaluator/
-user@foo:~$ python manage.py migrate
+user@foo:~$ (venv) python manage.py migrate
 ```
 
 * Create your Reference Corpus folder
@@ -54,6 +54,14 @@ Topic_Evaluator/
 Important: The reference corpus must be formed by multiple text files 
 with one document per line (no sub-folders)
 
+```
+
+* Run your project and test in the html viewer:
+```sh
+user@foo:~$ (venv) python manage.py runserver
+(...)
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
 ```
 
 
