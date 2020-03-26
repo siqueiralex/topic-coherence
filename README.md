@@ -14,7 +14,7 @@ You'll nedd `Python 3.7`, `Django`, `MysqlDB` and a good Reference Corpus.
 
 ### Installation:
 
--> Setup your virtual enviroment (recommended python version=3.7)
+    -> Setup your virtual enviroment
 
 ```sh
 user@foo:~$ virtualenv venv -p python3.7 
