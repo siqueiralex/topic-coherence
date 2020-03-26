@@ -1,4 +1,4 @@
-# topic-coherence
+# Topic Coherence Evaluation API
 
 ## Installation:
 
@@ -26,7 +26,8 @@ Topic_Evaluator/
     settings.py <-- to create this one
 ```
 
-#### Migrate to create your DB and tables:
+#### Migrate to create your Database Tables:
+* (inside Topic_Evaluator folder)
 ```sh
 user@foo:~$ python manage.py migrate
 ```
