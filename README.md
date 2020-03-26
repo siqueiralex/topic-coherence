@@ -73,7 +73,7 @@ Now check if your Project is up and running in your Browser.
 <p align="center">
 <img style="border: 1px solid"src="https://github.com/siqueiralex/topic-coherence/blob/master/User-Interface-Example.png" alt="User Interface" width="700px">
 </p>
-This Web interface is intended only for **simple** demonstration of topic evaluation process. Note that you should use at least two words separated by spaces. Works better if the topic words are well represented in the Reference Corpus.
+This Web interface is intended only for simple demonstration of topic evaluation process. Note that you should use at least two words separated by spaces. Works better if the topic words are well represented in the Reference Corpus.
 
 
 ## API end-points:
@@ -120,9 +120,6 @@ Example:
     }
 }
 ```
-
-
-"...the **go to** statement should be abolished..." 
 
 ## References
 <a id="1">[1]</a> 
