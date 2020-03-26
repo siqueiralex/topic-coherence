@@ -5,27 +5,23 @@ class FormHandler{
         this.topic = null;
         this.wordlist = null;
         this.topic_changed();
-        this.stemmed = false;
     }
 
     submit(){
         $('#result').html('')
-        if($("#stemmed").is(":checked")){
-            this.stemmed = true;
-        }else{
-            this.stemmed = false;
-        }
         if(this.wordlist.length > 1){
             $('#spinner').addClass("lds-spinner");
+            $('.result-container').addClass("hide");
             this.evaluate_topic( data => {
                 $('#spinner').removeClass("lds-spinner")
+                $('.result-container').removeClass("hide");
                 console.log( 'data:',data);
                 let str = "";
                 for(var index in data) {
                     str = str + index + ":  " + data[index] + "<br>";
                 }
                 
-                $('#result').html(str)
+                $('#result').append(str)
             });    
         }
     }
@@ -47,8 +43,7 @@ class FormHandler{
             type: 'POST',
             url: "/api/topic/",
             data: {
-                 topic: this.topic,
-                 stemmed: this.stemmed
+                 topic: this.topic
             },
             success: function(data) {
                callback(data);
