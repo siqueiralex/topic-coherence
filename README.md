@@ -1,6 +1,6 @@
 # Topic Coherence Evaluation API
 
-Rest API for semantic coherence evaluation of sets of words (topics). Calculated based on the co-occurrence of word pairs (PMI/NPMI) inside a (big and good enough) reference corpus, usually Wikipedia or/and News Articles. 
+Rest API for semantic coherence evaluation of word sets (topics). Calculated based on the co-occurrence of word pairs (PMI/NPMI) inside a (big and good enough) reference corpus, usually Wikipedia or/and News Articles. 
 
 This project is based on the work developed by Lau, Jey Han [[1]](#1), [Github](https://github.com/jhlau/topic_interpretability)
 
