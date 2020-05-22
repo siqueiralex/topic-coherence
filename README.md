@@ -30,7 +30,7 @@ user@foo:~$ source venv/bin/activate
 * Install depedencies
 
 ```sh
-user@foo:~$ (venv) pip install requirements.txt 
+user@foo:~$ (venv) pip install -r requirements.txt 
 ```
 
 * Create the `settings.py` file using the given example (adding DB information)
